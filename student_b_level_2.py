@@ -270,7 +270,6 @@ def get_page_html(form_data):
 
     where_clause = ("WHERE " + " AND ".join(where_parts)) if where_parts else ""
 
-    # --- determine ordering (by year) ---
     if sort_order.lower() == "ascending":
         order_clause = "ORDER BY i.year ASC"
     elif sort_order.lower() == "descending":
