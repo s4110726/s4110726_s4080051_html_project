@@ -61,7 +61,8 @@ def get_page_html(form_data):
 <style>
 body{{ 
   font-family: Arial, sans-serif; 
-  background: #474747; 
+  background: rgba(0,0,0,0.75) url(doc.jpg) center/cover no-repeat fixed;
+  background-blend-mode:darken;
   margin:0; 
   padding:24px; 
   }}
