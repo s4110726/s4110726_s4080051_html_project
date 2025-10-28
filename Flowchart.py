@@ -55,6 +55,8 @@ def get_page_html(form_data):
                 border: 2px solid white;
                 border-radius: 10px;
                 background-color: rgba(255,255,255,0.1);
+                position: relative;
+                bottom: 50px;
             }
 
             button {
@@ -66,6 +68,25 @@ def get_page_html(form_data):
                 color: white;
                 cursor: pointer;
                 transition: 0.3s;
+                position: relative;
+                top: 100px;
+            }
+            
+            .btn1{
+                display: inline-block;
+                border-radius: 8px;
+                background: #e5e7eb;
+                color: #0f172a;
+                text-decoration: none;
+                font-weight: 700;
+                border: 1px solid #d1d5db;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+                transition: background 0.12s 
+                ease, transform 0.12s 
+                ease;
+                position: relative;
+                right: 200px;
+                bottom: 50px;    
             }
 
             button:hover {
@@ -80,35 +101,57 @@ def get_page_html(form_data):
 
             .text-center {
                 text-align: center;
-                
+                postion:relative;
+                top:300px;
+            }
+            .rate_infection_name{
+                position:relative;
+                bottom: 120px;
+                right: 180px;
+            }
+            .global_infection_name{
+                position: relative;
+                top: 300px;
+                right: 300px;
+            }
+            .infection_chart{
+                position:relative;
+            }
+
+            .global_chart{
+            position:relative;
+            top:200px;
             }
 
         </style>
     </head>
     <body>
         <header>
-            <img src="download.png" alt="Logo">
+            <img src="World-Health-Organization-WHO-Logo.png" alt="Logo">
         </header>
 
        
 
             <div class="section">
                 <div class="chart-box">
-                    <img src="Rate of infection.jpeg" alt="Rate of Infection Chart">
+                    <div class="infection_chart">
+                        <img src="rate_of_infection_chart.jpeg" alt="Rate of Infection Chart">
+                    </div>
                 </div>
                 <div class="text-center">
-                    <h2>Rate of Infection</h2>
-                    <button>Button</button>
+                
+                    <div class="rate_infection_name"><h2>Rate of Infection</h2></div>
+                    <div class="button"><a href="/page5" class="btn1">VACCINATION RATE</a></button>
                 </div>
             </div>
 
             <div class="section">
                 <div class="text-center">
-                    <h2>Global Reported Infection</h2>
+                    <div class="global_infection_name"><h2>Global Reported Infection</h2>
                     <button>Button</button>
                 </div>
-                <div class="chart-box">
-                    <img src="Global infection.jpeg" alt="Global Infection Chart">
+                <div class="global_chart">
+                    <img src="global_rate_of_infection_chart.jpeg" alt="Global Infection Chart" width="300">
                 </div>
             </div>
         
