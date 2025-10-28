@@ -19,8 +19,8 @@ def get_page_html(form_data):
     years = sorted({str(d[3]) for d in data})
     infection_types = sorted({d[1] for d in data})
 
-    def pick(param_name):
-        v = form_data.get(param_name)
+    def pick(parameter):
+        v = form_data.get(parameter)
         if isinstance(v, list) and v:
             v = v[0]
         if v is None:
