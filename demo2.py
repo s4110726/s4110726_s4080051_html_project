@@ -22,6 +22,6 @@ pyhtml.MyRequestHandler.pages["/page2"]=Vaccination_summary; #Page to show when 
 #pyhtml.MyRequestHandler.pages["/page3"]=student_a_level_3; #Page to show when someone accesses "http://localhost/page3"
 pyhtml.MyRequestHandler.pages["/page4"]=Flowchart; #Page to show when someone accesses "http://localhost/page4"
 pyhtml.MyRequestHandler.pages["/page5"]=student_b_level_2; #Page to show when someone accesses "http://localhost/page5"
-#pyhtml.MyRequestHandler.pages["/page6"]=student_b_level_3; #Page to show when someone accesses "http://localhost/page6"
+pyhtml.MyRequestHandler.pages["/page6"]=student_b_level_3; #Page to show when someone accesses "http://localhost/page6"
 #Host the site!
 pyhtml.host_site()

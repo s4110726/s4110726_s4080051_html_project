@@ -125,8 +125,6 @@ button {{
   color: #111;
   border-radius: 4px;
   font-weight: bold;
-  position: relative;
-  top: 100px;
 }}
 .tablewrap {{
   background: #fff;
@@ -222,7 +220,3 @@ tr:nth-child(even) td {{
 """
     return page_html
 
-<<<<<<< HEAD:student_b_level_2.py
-=======
-    return page_html    
->>>>>>> c6b938431cdbac41cfb0c7886279949df41b1275:rate.py
