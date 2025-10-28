@@ -68,6 +68,9 @@ def get_page_html(form_data):
  <div class="Flw">
   <a href="/page2" class="btn1">Vaccination Data Summary</a>
  </div>
+  <div class="Flw">
+  <a href="/page3" class="btn1">Improvement</a>
+ </div>
 </div>
 
 </body>
