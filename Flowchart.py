@@ -141,14 +141,14 @@ def get_page_html(form_data):
                 <div class="text-center">
                 
                     <div class="rate_infection_name"><h2>Rate of Infection</h2></div>
-                    <div class="button"><a href="/page5" class="btn1">VACCINATION RATE</a></button>
+                    <div class="button"><a href="/page5" class="btn1">VACCINATION RATE</a>
                 </div>
             </div>
 
             <div class="section">
                 <div class="text-center">
                     <div class="global_infection_name"><h2>Global Reported Infection</h2>
-                    <button>Button</button>
+                    <button><div class="button"><a href="/page5" class="btn1">VACCINATION RATE</a></button>
                 </div>
                 <div class="global_chart">
                     <img src="global_rate_of_infection_chart.jpeg" alt="Global Infection Chart" width="300">
