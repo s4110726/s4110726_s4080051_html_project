@@ -159,7 +159,7 @@ tr:nth-child(even) td {{
 }}
 .Flw {{
   text-align: center;
-  margin: 12px 0;
+  margin: 12px 0px;
 }}
 .btn1 {{
   display: inline-block;
@@ -181,12 +181,14 @@ tr:nth-child(even) td {{
   font-size: 14px;
   margin-top: 20px;
 }}
+
 </style>
 </head>
 <body>
   <div class="shell">
     <div class="Flw">
       <a href="/" class="btn1">Go Back to Home</a>
+      <a href="/page3" class="btn1">Improvement</a>
     </div>
 
     <div class="logo"><img src="download.png" width="100%"></div>
