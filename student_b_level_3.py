@@ -162,9 +162,27 @@ tr:nth-child(even){{
   font-weight: 700;
   border: 1px solid #d1d5db;
   position: relative;
-  top: 100px;
+  top: 140px;
 }}
 .btn1:hover {{
+  background: skyblue;
+  transition: 0.3s;
+}}
+
+.btn2 {{
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  background: #e5e7eb;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid #d1d5db;
+  position: relative;
+  top: 100px;
+  left: 200px;
+}}
+.btn2:hover {{
   background: skyblue;
   transition: 0.3s;
 }}
@@ -174,11 +192,12 @@ tr:nth-child(even){{
 <header>
     <img src="World-Health-Organization-WHO-Logo.png" alt="Logo">
 </header>
-=
+
 <div class="layout">
 <div class="Flw">
   <a href="/" class="btn1">Go Back to Home</a>
 </div>
+<a href="/page5" class="btn2">Infection Rate</a>
 <div class="infection_background"><div class="infection_count">Global infection: 3,400,000</div></div>
 <div class="container">
 <h1>Global Reported Infection</h1>

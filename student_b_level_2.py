@@ -170,6 +170,23 @@ tr:nth-child(even) td {{
   background: skyblue;
   transition: 0.3s;
 }}
+.btn2 {{
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  background: #e5e7eb;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid #d1d5db;
+  position: relative;
+  bottom: 52px;
+  left: 700px;
+}}
+.btn2:hover {{
+  background: skyblue;
+  transition: 0.3s;
+}}
 .footer {{
   text-align: center;
   color: #ccc;
@@ -183,7 +200,7 @@ tr:nth-child(even) td {{
     <div class="Flw">
       <a href="/" class="btn1">Go Back to Home</a>
     </div>
-
+    <a href="/page6" class="btn2">Global Reported Infection</a>
     <div class="logo"><img src="World-Health-Organization-WHO-Logo.png" width="100%"></div>
     <h1>Infection Data Summary</h1>
 
