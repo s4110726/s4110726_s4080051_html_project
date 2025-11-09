@@ -8,36 +8,42 @@ def get_page_html(form_data):
         cur = con.cursor()
 
         # Country Count
-        cur.execute("SELECT COUNT(*) FROM Country;")
-        country_count = cur.fetchone()[0]
+        cur.execute("SELECT COUNT(*) FROM Country;") # select country from table country)
+        country_count = cur.fetchone()[0] #it fetch the value and the 0 means takes first value and give the country count)
 
-        # Highest Vaccine Coverage Region
+        # Highest Vaccine Coverage Region 
         cur.execute("""
-            SELECT c.region, ROUND(AVG(v.coverage), 2)
+            SELECT r.region, ROUND(AVG(v.coverage), 2) 
             FROM Vaccination v
             JOIN Country c ON c.CountryID = v.country
-            GROUP BY c.region
+            JOIN Region r ON c.region = r.RegionID
+            GROUP BY r.region
             ORDER BY AVG(v.coverage) DESC
             LIMIT 1;
-        """)
-        row = cur.fetchone()
-        cov_region = row[0] if row else "N/A"
+        """) # it takes full name of region and takes average value of coverage from vaccination table. Round means decimal value 
+        # And it join country table to countryid from vaccination table
+        # also, join the region table and match each country region and then it group country with same region and take out the value
+        # it sort them in desc order which means highest comes at first and then it takes top one and display it
+
+        row = cur.fetchone() # It fetch one row which have the value
+        cov_region = row[0] if row else "N/A"# it means if row gives result then take row[0] othersie N/A
         cov_value = row[1] if row else 0
 
-        #  Region with Highest Infection
+        #  Region with Highest Infection 
         cur.execute("""
-            SELECT c.region, SUM(i.cases)
+            SELECT r.region, SUM(i.cases)
             FROM InfectionData i
             JOIN Country c ON c.CountryID = i.country
-            GROUP BY c.region
+            JOIN Region r ON c.region = r.RegionID
+            GROUP BY r.region
             ORDER BY SUM(i.cases) DESC
             LIMIT 1;
-        """)
+        """)#Select the region name (r.region) and the total number of infection cases (SUM(i.cases)) for each region.
         row = cur.fetchone()
         inf_region = row[0] if row else "N/A"
         inf_cases = row[1] if row else 0
 
-        #  Average Coverage (all countries)
+        #  Average Coverage
         cur.execute("SELECT ROUND(AVG(coverage), 2) FROM Vaccination;")
         avg_cov = cur.fetchone()[0] or 0
 
